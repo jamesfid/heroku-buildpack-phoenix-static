@@ -190,6 +190,7 @@ run_compile() {
   fi
 
   cd $assets_dir
+  ls -l
 
   if [ -f $custom_compile ]; then
     info "Running custom compile"
@@ -203,6 +204,7 @@ run_compile() {
 
   if [ $has_clean = 0 ]; then
     info "Caching assets"
+    ls -l
     rsync -a --delete -v priv/static/ $cache_dir/phoenix-static
   fi
 }
