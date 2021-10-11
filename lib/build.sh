@@ -204,8 +204,10 @@ run_compile() {
 
   if [ $has_clean = 0 ]; then
     info "Caching assets"
-    ls -l
     rsync -a --delete -v priv/static/ $cache_dir/phoenix-static
+    ls -l priv/
+    info "Static v"
+    ls -l priv/static
   fi
 }
 
